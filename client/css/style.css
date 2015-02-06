@@ -1,0 +1,74 @@
+.header{
+	background-color:black;
+	height:30px;
+	width:100%;	
+	border-radius:5px;
+}
+
+.header-list li{
+	list-style-type: none;
+	display:inline;
+	color:white;
+	padding-right: 30px;
+}
+
+.header-list a{
+	color:white;
+	text-decoration: none;
+}
+
+.pane{
+	border:1px solid black;
+	height:70%;
+	margin-top:10px;
+}
+
+.pane-left{
+	border-right:1px dashed black;
+	height:100%;
+}
+
+.pane-left li{
+	height:20px;
+	background-color: pink;
+	margin-bottom:2px;
+	border-radius: 5px;	
+	width:80%;
+}
+
+.pane-right{
+
+	height:100%;
+		overflow:auto;
+}
+
+.title-bar{
+	float:none;
+	margin:0 auto;
+	font-weight:bold; 
+	border-bottom:1px solid black
+}
+
+
+#ChatPane li{
+	padding-left:10px;
+	background-color: #8de092;
+	border-radius:7px;
+	list-style-type:none;
+}
+
+.active-pane{
+	height:auto;
+	padding:5px;
+	background-color: #e6f2ff;
+}
+
+.active-pane #chatInput{
+	width:80%;
+	height:inherit;
+}
+
+.active-pane button{
+	width:15%;
+
+}

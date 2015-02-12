@@ -17,6 +17,16 @@
 	text-decoration: none;
 }
 
+.pane-header{
+	margin-top:10px;
+	padding-left: 10px;
+	background-color: #b4b4b4;
+}
+
+#panal--chgnick{
+	float:right;
+	padding-right:10px;
+}
 .pane{
 	border:1px solid black;
 	height:70%;
@@ -29,8 +39,9 @@
 }
 
 .pane-left li{
+	padding-left:10px;
 	height:20px;
-	background-color: pink;
+	background-color: #8de092;
 	margin-bottom:2px;
 	border-radius: 5px;	
 	width:80%;
@@ -49,12 +60,23 @@
 	border-bottom:1px solid black
 }
 
-
 #ChatPane li{
 	padding-left:10px;
-	background-color: #8de092;
+	padding-right:10px;
 	border-radius:7px;
 	list-style-type:none;
+	margin-bottom:2px;
+}
+
+
+#ChatPane li span{
+	padding-left:10px;
+	padding-right:10px;
+	background-color: #e6f2ff;
+	border-radius:7px;
+	list-style-type:none;
+	display:inline-block ;
+	margin-bottom:2px;
 }
 
 .active-pane{
@@ -65,10 +87,16 @@
 
 .active-pane #chatInput{
 	width:80%;
-	height:inherit;
+	height:60px;
 }
 
 .active-pane button{
 	width:15%;
 
+}
+
+#submit{
+	float:right;
+	width:80px;
+	height:60px;
 }

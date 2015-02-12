@@ -2,8 +2,10 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link rel="stylesheet" type="text/css" href="css/lib/bootstrap.min.css">
-<!-- 		<link rel="stylesheet" type="text/css" href="css/style.css"> -->
-		<script type="text/javascript" src=""></script>
+ 		<link rel="stylesheet" type="text/css" href="css/lib/jquery.cssemoticons.css">
+
+		<script src="http://192.168.1.90:8080/socket.io/socket.io.js"></script>
+		<script data-main="js/main.js" type="text/javascript" src="js/lib/require.min.js"></script>
 	</head>
 
 	<body>
@@ -17,6 +19,14 @@
 		</div>
 
 		<div class="container">
+			<div class="row pane-header">
+				<span id="panal--nick">Hello User</span>
+				<span id="panal--chgnick"><a onclick="changeNick()">Change Nick</a></span>
+			</div>
+			<div class="row " style="text-align:center">
+				<span >Connected to <b>MtPOP</b> [<b>M</b>ore <b>T</b>han real<b>POP</b>]*</span>
+			</div>
+
 			<div class="row pane" >
 				<div class="col-xs-3 pane-left">
 					<div class="row">
@@ -25,10 +35,9 @@
 						</div>
 					</div>
 
-					<div class="row" style="background-color: #e6f2ff;">
+					<div class="row">
 						<div class="col-xs-12" >	
 							<ul style="margin-top:20px;;padding:0 10px" id="UserPane">
-								<li>hi</li><li>hi</li>
 							</ul>
 						</div>
 					</div>
@@ -43,23 +52,27 @@
 
 					<div class="row" style="height:80%">
 						<div class="col-xs-12" >
-							<ul style="margin-top:20px;padding:0 10px" id="ChatPane" >
-								<li><b>Nalin:</b> hi</li>
+							<ul style="margin-top:20px;padding:0 10px" id="ChatPane" class="emoticons">
+
 							</ul>
 						</div>
 					</div>		
-					<form class="active-pane row">
-						
+
+					
+				</div>
+				<div class="col-xs-9 pull-right" style="margin-top:10px">
+					<form class="active-pane row">		
 							<div class="col-xs-12" >
-								<textarea id="chatInput"></textarea> 
-								<button type="submit"> SEND </button>
+								<textarea id="chatInput" placeholder="Hit Ctrl+Space to send"></textarea> 
+								<input type="button" value="Send" id="submit">
 							</div>			
 					</form>
-
 				</div>
 
 			</div>
 		</div>
-
 	</body>
 </html>
+
+
+

@@ -3,6 +3,7 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link rel="stylesheet" type="text/css" href="css/lib/bootstrap.min.css">
  		<link rel="stylesheet" type="text/css" href="css/lib/jquery.cssemoticons.css">
+ 		<link rel="stylesheet" type="text/css" href="css/lib/jquery.webui-popover.css">
 
 		<script src="http://192.168.1.90:8080/socket.io/socket.io.js"></script>
 		<script data-main="js/main.js" type="text/javascript" src="js/lib/require.min.js"></script>
@@ -43,7 +44,7 @@
 					</div>
 				</div>
 
-				<div class="col-xs-9 pane-right">
+				<div class="col-xs-9 pane-right" id="ChatContainer">
 					<div class="row">
 						<div class="col-xs-12 title-bar">
 							Chat panel
@@ -63,7 +64,10 @@
 				<div class="col-xs-9 pull-right" style="margin-top:10px">
 					<form class="active-pane row">		
 							<div class="col-xs-12" >
+
 								<textarea id="chatInput" placeholder="Hit Ctrl+Space to send"></textarea> 
+
+								<img id="pop" src="images/emoticon.png" style="width:25px;height:25px;vertical-align:top;">
 								<input type="button" value="Send" id="submit">
 							</div>			
 					</form>

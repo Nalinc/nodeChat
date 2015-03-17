@@ -4,7 +4,7 @@ define(["client"],function(client){
 	
 	changeNick = function(){
 					alert(client.nickname+' really suits you, please please dont change');
-				}
+				};
 
 	$("#submit").on("click",preSend);
 
@@ -31,7 +31,8 @@ define(["client"],function(client){
 		$("#ChatPane").append(list);
 		$("#chatInput").val("");
 		$('.emoticons').emoticonize();
-		socket.emit("messageOut",{name:nick,text:msg});		
+		socket.emit("messageOut",{name:nick,text:msg});	
+		$('#ChatContainer').animate({"scrollTop": $('#ChatContainer')[0].scrollHeight}, "slow");
 	}
 	window.changeNick = changeNick;
 });

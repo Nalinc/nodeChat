@@ -59,6 +59,9 @@
 	font-weight:bold; 
 	border-bottom:1px solid black
 }
+#ChatContainer{
+	overflow:auto;
+}
 
 #ChatPane li{
 	padding-left:10px;
@@ -96,7 +99,7 @@
 }
 
 #submit{
-	float:right;
+	vertical-align: top;
 	width:80px;
 	height:60px;
 }

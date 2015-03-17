@@ -1,4 +1,4 @@
-require(["client","jQuery","events","emoticons"],function(client){
+require(["client","jQuery","events","emoticons","popover"],function(client){
 
 	console.log(client.nickname);
 	client.clogs();
@@ -9,11 +9,12 @@ require(["client","jQuery","events","emoticons"],function(client){
 require.config({
 	paths:{
 		'jQuery':'lib/jquery-1.11.1.min',
-		'emoticons':'lib/jquery.cssemoticons.min'
+		'emoticons':'lib/jquery.cssemoticons.min',
+		'popover':'lib/jquery.webui-popover'
 	},
 	shim:{
 		'client':{
-			deps:['jQuery'],
+			deps:['jQuery','popover'],
 			exports: 'client'
 		},
 		'events':{
@@ -21,6 +22,9 @@ require.config({
 		},
 		'emoticons':{
 			deps:['jQuery']
+		},
+		'popover':{
+			deps:['jQuery','emoticons']
 		}
 	}
 

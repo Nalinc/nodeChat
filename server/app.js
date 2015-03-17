@@ -5,18 +5,18 @@ var io = require('socket.io')(server);
 var path = require('path');
 
 var messages = [];
-var users = []
+var users = [];
 
 var storeMessage = function(name, data){
 	messages.push({name:name,text:data});
 	if(messages.length > 10){
 		messages.shift();
 	}
-}
+};
 
 var storeUsers = function(name){
 	users.push(name);
-}
+};
 
 app.use(express.static(path.normalize(__dirname + '/../client')));
 
@@ -31,7 +31,7 @@ io.on('connection',function(client){
 
 	client.on('join',function(data){
 		client.name = data; //add a new property to client to identify it during deletion
-		storeMessage(null,"<span style='color:green;'>"+data+" Joined the chat </span>");
+		storeMessage(null,"<span style='color:green; '>"+data+" Joined the chat </span>");
 
 		storeUsers(data);
 		console.log('user ' +data+' joined!');
@@ -71,7 +71,7 @@ var enableCORS = function(req, res, next) {
         res.send(200);
     } else {
         next();
-    };
+    }
 };
 
     // enable CORS!
